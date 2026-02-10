@@ -29,7 +29,7 @@ print("=" * 80)
 print("\n1. CARGA DE DATOS")
 print("-" * 80)
 
-df = pd.read_csv('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/data/estudiantes_procesados_v3.csv')
+df = pd.read_csv('data/estudiantes_procesados_v3.csv')
 print(f"✓ Datos cargados: {df.shape[0]} estudiantes, {df.shape[1]} columnas")
 
 # ============================================================================

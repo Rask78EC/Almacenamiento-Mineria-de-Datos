@@ -25,7 +25,7 @@ print("=" * 80)
 print("\n1. CARGA Y LIMPIEZA DE DATOS")
 print("-" * 80)
 
-df = pd.read_excel('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/REPORTE_RECORD_ESTUDIANTIL_ANONIMIZADO.xlsx')
+df = pd.read_excel('data/REPORTE_RECORD_ESTUDIANTIL_ANONIMIZADO.xlsx')
 print(f"✓ Dataset cargado: {df.shape[0]} registros, {df.shape[1]} columnas")
 
 # Convertir promedios con comas a puntos decimales

@@ -52,21 +52,21 @@ st.markdown("""
 @st.cache_data
 def cargar_datos():
     """Carga todos los datos necesarios"""
-    df_estudiantes = pd.read_csv('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/data/estudiantes_procesados_v3.csv')
-    df_importancias = pd.read_csv('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/models/importancia_features_v3.csv')
-    df_originales = pd.read_csv('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/data/datos_originales_v3.csv')
+    df_estudiantes = pd.read_csv('data/estudiantes_procesados_v3.csv')
+    df_importancias = pd.read_csv('models/importancia_features_v3.csv')
+    df_originales = pd.read_csv('data/datos_originales_v3.csv')
     return df_estudiantes, df_importancias, df_originales
 
 @st.cache_resource
 def cargar_modelos():
     """Carga el modelo y componentes"""
-    with open('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/models/modelo_arbol_decision_v3.pkl', 'rb') as f:
+    with open('models/modelo_arbol_decision_v3.pkl', 'rb') as f:
         modelo = pickle.load(f)
-    with open('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/models/features_v3.pkl', 'rb') as f:
+    with open('models/features_v3.pkl', 'rb') as f:
         features = pickle.load(f)
-    with open('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/models/metricas_v3.pkl', 'rb') as f:
+    with open('models/metricas_v3.pkl', 'rb') as f:
         metricas = pickle.load(f)
-    with open('C:/Users/Magno/Documents/U GUAYAQUIL/NIVEL 5/ALMACENAMIENTO DE DATOS Y MINERIA/Proyecto Final/2/PROYECTO_ABANDONO_ACADEMICO_V3/models/jornada_encoding_v3.pkl', 'rb') as f:
+    with open('models/jornada_encoding_v3.pkl', 'rb') as f:
         jornada_map = pickle.load(f)
     return modelo, features, metricas, jornada_map
 
